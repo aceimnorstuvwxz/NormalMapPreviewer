@@ -107,7 +107,7 @@ vec2 calcRelativeTexcoordNormal(vec2 texcoord)
 {
 
     texcoord = texcoord * (1.0/8.0);
-    float y = (1.0/8.0) * float(u_building_animation_index/8 * + 1);
+    float y = (1.0/8.0) * float(u_building_animation_index/8 * 2 + 1);
     float x = (1.0/8.0) * float(u_building_animation_index - (u_building_animation_index/8)*8);
     texcoord = vec2(x,y) + texcoord;
     return texcoord;
