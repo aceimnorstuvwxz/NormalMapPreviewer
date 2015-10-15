@@ -1,5 +1,8 @@
 #include "AppDelegate.h"
-#include "HelloWorldScene.h"
+#include "GameScene.h"
+#include "DDMapData.h"
+#include "ScatOrcScene.h"
+#include "DDUpgradeLoad.h"
 
 USING_NS_CC;
 
@@ -38,35 +41,42 @@ bool AppDelegate::applicationDidFinishLaunching() {
         director->setOpenGLView(glview);
     }
 
-    // turn on display FPS
     director->setDisplayStats(true);
-
-    // set FPS. the default value is 1.0/60 if you don't call this
-    director->setAnimationInterval(1.0 / 60);
+    
+    director->setAnimationInterval(1.0 / 30);
 
     register_all_packages();
 
-    // create a scene. it's an autorelease object
-    auto scene = HelloWorld::createScene();
+    DDMapData::s()->recover();
+//    TRLocale::s().recover();
+    DDUpgradeRoadMap::build();
 
-    // run
+    auto scene = ScatOrcScene::create();
+
     director->runWithScene(scene);
 
     return true;
 }
 
-// This function will be called when the app is inactive. When comes a phone call,it's be invoked too
 void AppDelegate::applicationDidEnterBackground() {
     Director::getInstance()->stopAnimation();
 
-    // if you use SimpleAudioEngine, it must be pause
-    // SimpleAudioEngine::getInstance()->pauseBackgroundMusic();
+//    CocosDenshion::SimpleAudioEngine::getInstance()->pauseBackgroundMusic();
+//    CocosDenshion::SimpleAudioEngine::getInstance()->pauseAllEffects();
+
+    //TODO if in game , pause the game
+
+    DDMapData::s()->store();
+//    TRLocale::s().store();
+//    TRLocale::s().applyVolumeSettings();
 }
 
-// this function will be called when the app is active again
 void AppDelegate::applicationWillEnterForeground() {
     Director::getInstance()->startAnimation();
+    DDMapData::s()->recover();
 
-    // if you use SimpleAudioEngine, it must resume here
-    // SimpleAudioEngine::getInstance()->resumeBackgroundMusic();
+
+//    CocosDenshion::SimpleAudioEngine::getInstance()->resumeBackgroundMusic();
+//    CocosDenshion::SimpleAudioEngine::getInstance()->resumeAllEffects();
+//    EditState::s()->_needPause = true;
 }
