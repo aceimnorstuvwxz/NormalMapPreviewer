@@ -4,12 +4,15 @@
 #include "DDConfig.h"
 #include "ScatOrcScene.h"
 #include "DDMapData.h"
+#include "format.h"
 
 
 USING_NS_CC;
 
 bool GameScene::init()
 {
+    static cocos2d::Label* _lbAnimationIndex;
+    static int _animationIndex = 0;
     assert(TRBaseScene::init());
 
 
@@ -50,6 +53,25 @@ bool GameScene::init()
         _battleField.configAnimationTexture("/Users/chenbingfeng/Documents/NormalMapPreviewer/0/animation.png");
     });
 
+    addCommonBtn({0.75,0.1}, "shadow", [this](){
+        _battleField.configShadowVisible();
+    });
+
+    _lbAnimationIndex = Label::createWithTTF("123", "fonts/fz.ttf", 30);
+    _lbAnimationIndex->setPosition(genPos({0.5, 0.9}));
+    _defaultLayer->addChild(_lbAnimationIndex);
+
+    addCommonBtn({0.75,0.9}, "next", [this](){
+        _animationIndex++;
+        _battleField.configAnimationIndex(_animationIndex);
+        _lbAnimationIndex->setString(fmt::sprintf("%d", _animationIndex));
+    });
+
+    addCommonBtn({0.25,0.9}, "prev", [this](){
+        _animationIndex--;
+        _battleField.configAnimationIndex(_animationIndex);
+        _lbAnimationIndex->setString(fmt::sprintf("%d", _animationIndex));
+    });
 
     _defaultLayer->setZOrder(1000);
 

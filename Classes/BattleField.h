@@ -231,7 +231,7 @@ public:
     void configBeAttacked(float opacity);
     void configBeCured(float opacity);
     void configAmbientColor(const cocos2d::Vec4& color);
-    void configAnimationTexture(cocos2d::Texture2D* texture) {_textureBuildingAnimation = texture;_textureBuildingNormalMap = texture;}
+    void configAnimationTexture(cocos2d::Texture2D* texture) {_textureBuildingAnimation = texture; _textureBuildingNormalMap = texture;}
     void updateLights(LightNode* lights);
 
 protected:
@@ -310,14 +310,14 @@ public:
     }
 
 
+    BattleHighNode* _highNode;
+    BattleMiddleNode* _middleNode;
+    BattleLowNode* _lowNode;
 protected:
     cocos2d::Layer* _battleLayer;
     AgentPos _agentPos;
     cocos2d::Vec2 _agentFloatPos;
     float _agentHeight;
-    BattleHighNode* _highNode;
-    BattleMiddleNode* _middleNode;
-    BattleLowNode* _lowNode;
 };
 
 
@@ -352,6 +352,7 @@ public:
 
     void configAnimationTexture(const std::string& fn);
     void configAnimationIndex(int index);
+    void configShadowVisible();
 
 
 
@@ -362,7 +363,7 @@ protected:
     cocos2d::Layer* _battleLayer;
     LightNodeManager _lightManager;
 
-    constexpr static int NUM_TEST_LIGHT = 5;
+    constexpr static int NUM_TEST_LIGHT = 2;
     BattleMiddleNode* _testMiddleNode;
     BattleHighNode* _testHighNode;
     cocos2d::Sprite* _testLightIcon[NUM_TEST_LIGHT];

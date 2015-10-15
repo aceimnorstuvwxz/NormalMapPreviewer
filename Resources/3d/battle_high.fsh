@@ -93,9 +93,30 @@ vec3 computeLightingForAllLights(vec3 ambientColor, vec3 diffuseColor, vec3 norm
     return colorGammaCorrected;
 }
 
+vec2 calcRelativeTexcoordTexture(vec2 texcoord)
+{
+
+    texcoord = texcoord * (1.0/8.0);
+    float y = (1.0/8.0) * float(u_building_animation_index/8 * 2);
+    float x = (1.0/8.0) * float(u_building_animation_index - (u_building_animation_index/8)*8);
+    texcoord = vec2(x,y) + texcoord;
+    return texcoord;
+}
+
+vec2 calcRelativeTexcoordNormal(vec2 texcoord)
+{
+
+    texcoord = texcoord * (1.0/8.0);
+    float y = (1.0/8.0) * float(u_building_animation_index/8 * + 1);
+    float x = (1.0/8.0) * float(u_building_animation_index - (u_building_animation_index/8)*8);
+    texcoord = vec2(x,y) + texcoord;
+    return texcoord;
+}
+
 vec3 fetchNormalVector(vec2 texcoord)
 {
-    vec4 texcol = texture2D(u_texture_building_normalmap, texcoord);
+
+    vec4 texcol = texture2D(u_texture_building_normalmap, calcRelativeTexcoordNormal(texcoord));
     return normalize(texcol.rgb - vec3(0.5,0.5,0.5));
 }
 
@@ -105,7 +126,7 @@ void main()
     vec4 resColor = vec4(0.0,0.0,0.0,0.0);
     vec4 tmpColor = resColor;
     //buildingAnimation TODO 动画
-    tmpColor = texture2D(u_texture_building_animation, v_texcoord);
+    tmpColor = texture2D(u_texture_building_animation, calcRelativeTexcoordTexture(v_texcoord));
     resColor = mix(resColor, tmpColor, tmpColor.a);
 
     //法向贴图 TODO通过光源计算

@@ -136,6 +136,16 @@ void BattleField::configAnimationIndex(int index)
     }
 }
 
+void BattleField::configShadowVisible()
+{
+    for (int i = 0; i < DDConfig::BATTLE_NUM; i++) {
+        for (int j = 0; j < DDConfig::BATTLE_NUM; j++) {
+            AgentPos agentPos = {i - DDConfig::BATTLE_NUM/2,j - DDConfig::BATTLE_NUM/2};
+            _agentNodeMap[agentPos]->_middleNode->setVisible(!(_agentNodeMap[agentPos]->_middleNode->isVisible()));
+        }
+    }
+}
+
 Vec2 BattleField::help_battleLayerPos2agentFloatPos(const cocos2d::Vec2& srcPos)
 {
     return {srcPos.x / DDConfig::battleCubeWidth(), srcPos.y / DDConfig::battleCubeWidth()};
@@ -408,7 +418,7 @@ void BattleField::initMovingNewBuildThings()
     listener->onTouchCancelled = [this](Touch* touch, Event* event){
     };
 
-    _battleLayer->getEventDispatcher()->addEventListenerWithSceneGraphPriority(listener, _battleLayer);
+//    _battleLayer->getEventDispatcher()->addEventListenerWithSceneGraphPriority(listener, _battleLayer);
 }
 
 void BattleField::calcVisionMapAndRefreshCover() //计算视野地图，同时更新cover层。

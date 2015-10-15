@@ -11,6 +11,7 @@ void BattleField::addTestLights()
         sp->setScale(DDConfig::battleCubeWidth()/sp->getContentSize().width);
         sp->setPosition(help_agentPos2agentFloatPos({i-3,-2}));
         sp->setZOrder(BattleField::Z_TEST_LIGHT);
+        sp->setScale(0.25);
         _battleLayer->addChild(sp);
 
         _testLightIcon[i] = sp;
