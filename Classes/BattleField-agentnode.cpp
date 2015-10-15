@@ -55,6 +55,19 @@ void AgentNode::configAgentPos(const AgentPos &pos)
     _agentPos = pos;
 }
 
+void AgentNode::configAnimation(cocos2d::Texture2D* texture)
+{
+//    auto fn_config = fmt::sprintf("%s/config.json", path);
+//    auto fn_animation = fmt::sprintf("%s/animation.png", path);
+//    auto fn_shadow = fmt::sprintf("%s/shadow.png", path);
+    _highNode->configAnimationTexture(texture);
+}
+
+void AgentNode::configAnimationIndex(int index)
+{
+    _highNode->configBuildingAnimationIndex(index);
+}
+
 void AgentNode::updateLights(LightNode* lights)
 {
     _middleNode->updateLights(lights);

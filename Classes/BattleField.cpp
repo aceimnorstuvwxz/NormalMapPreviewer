@@ -114,6 +114,28 @@ void BattleField::init(cocos2d::Layer *battleLayer)
     initMovingNewBuildThings();
 }
 
+void BattleField::configAnimationTexture(const std::string& fn)
+{
+    Director::getInstance()->getTextureCache()->reloadTexture(fn);
+    auto texture = Director::getInstance()->getTextureCache()->addImage(fn);
+    for (int i = 0; i < DDConfig::BATTLE_NUM; i++) {
+        for (int j = 0; j < DDConfig::BATTLE_NUM; j++) {
+            AgentPos agentPos = {i - DDConfig::BATTLE_NUM/2,j - DDConfig::BATTLE_NUM/2};
+            _agentNodeMap[agentPos]->configAnimation(texture);
+        }
+    }
+
+}
+void BattleField::configAnimationIndex(int index)
+{
+    for (int i = 0; i < DDConfig::BATTLE_NUM; i++) {
+        for (int j = 0; j < DDConfig::BATTLE_NUM; j++) {
+            AgentPos agentPos = {i - DDConfig::BATTLE_NUM/2,j - DDConfig::BATTLE_NUM/2};
+            _agentNodeMap[agentPos]->configAnimationIndex(index);
+        }
+    }
+}
+
 Vec2 BattleField::help_battleLayerPos2agentFloatPos(const cocos2d::Vec2& srcPos)
 {
     return {srcPos.x / DDConfig::battleCubeWidth(), srcPos.y / DDConfig::battleCubeWidth()};

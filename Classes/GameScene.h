@@ -50,7 +50,6 @@ protected:
     BattleField _battleField;
     void initBattleField();
 
-
     cocos2d::Sprite* _battleDialogBackgorund;
     cocos2d::Label* _battleDialogMessageLabel;
 //    cocos2d::ui::Button* _battleDialogButtonPositive;

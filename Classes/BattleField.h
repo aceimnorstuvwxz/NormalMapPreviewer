@@ -231,6 +231,7 @@ public:
     void configBeAttacked(float opacity);
     void configBeCured(float opacity);
     void configAmbientColor(const cocos2d::Vec4& color);
+    void configAnimationTexture(cocos2d::Texture2D* texture) {_textureBuildingAnimation = texture;_textureBuildingNormalMap = texture;}
     void updateLights(LightNode* lights);
 
 protected:
@@ -290,6 +291,10 @@ public:
     void step(float dt);
     void configAgentFloatPos(const cocos2d::Vec2& pos); //会实际改变Node的位置
     void configAgentPos(const AgentPos& pos); //并不会实际改变位置
+    void configAnimation(cocos2d::Texture2D* texture);
+    void configAnimationIndex(int index);
+
+
     void updateLights(LightNode* lights);
     void clear();//清除所有
     void build(int aid, int agentType, int agentLevel, bool boss, bool lowBlood);
@@ -343,6 +348,10 @@ public:
     virtual void op_switch2minmap() override;// bigmap 来通知battle field切换minmap!
 
     virtual void op_mapdata_message(DDBattleObserveMessage message, int aid_src, int aid_des); // mapdata 来通知battle field各种消息！
+
+
+    void configAnimationTexture(const std::string& fn);
+    void configAnimationIndex(int index);
 
 
 

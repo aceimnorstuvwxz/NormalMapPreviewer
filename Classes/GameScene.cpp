@@ -45,6 +45,12 @@ bool GameScene::init()
     addCommonBtn({0.5,0.1}, "reset", [this](){
         Director::getInstance()->replaceScene(GameScene::create());
     });
+
+    addCommonBtn({0.25,0.1}, "refresh", [this](){
+        _battleField.configAnimationTexture("/Users/chenbingfeng/Documents/NormalMapPreviewer/0/animation.png");
+    });
+
+
     _defaultLayer->setZOrder(1000);
 
     scheduleUpdate();
@@ -52,6 +58,7 @@ bool GameScene::init()
 
     return true;
 }
+
 
 void GameScene::initBigmap()
 {
