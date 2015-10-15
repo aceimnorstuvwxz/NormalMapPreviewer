@@ -131,7 +131,7 @@ void main()
 
     //法向贴图 TODO通过光源计算
     vec3 normalVector = fetchNormalVector(v_texcoord);
-    vec3 lightRet = computeLightingForAllLights(vec3(0.1,0.1,0.1), resColor.rgb, normalVector);
+    vec3 lightRet = computeLightingForAllLights(vec3(0.0,0.0,0.0), resColor.rgb, normalVector);
     resColor = vec4(lightRet, resColor.a);
     
     /*
