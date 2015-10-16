@@ -60,8 +60,9 @@ vec3 computeLightingPerLight(vec3 diffuseColor, vec3 specularColor, vec3 normal,
 {
     float lambertian = max(dot(lightDir, normal), 0.0);
     float specular = 0.0;
+
     if (lambertian > 0.0) {
-        vec3 viewDir = vec3(0.0,0.0,-1.0);
+        vec3 viewDir = vec3(0.0,0.0,1.0);
 
         // this is blinn phong
         vec3 halfDir = normalize(lightDir + viewDir);
