@@ -13,7 +13,6 @@ uniform vec4 u_para_attacked_cured;//{is_attacked, is_cured, not used, not used}
 #define DD_EXPAND_SHADOW 1.0
 #define DD_EXPAND_NORMAL 0.5
 #define DD_LIGHT_NUM 5
-#define DD_ANIMATION_LINE_MAX 10 //每行有多少帧，从左上开始计数
 
 uniform int u_building_animation_index;
 
@@ -21,7 +20,7 @@ uniform int u_building_animation_index;
 uniform vec4 u_lights[DD_LIGHT_NUM];//{pos.x,pos.y,quantity,height}//这里的pox是光源->我的相对坐标，我们还需要就每个pixel的偏移做出修正。通过quantity取0来不显示阴影。
 uniform vec4 u_lights_color[DD_LIGHT_NUM];//光源颜色
 
-const float shininess = 16.0;
+const float shininess = 32.0;
 const float screenGamma = 2.2; // Assume the monitor is calibrated to the sRGB color space
 
 
@@ -98,7 +97,7 @@ vec2 calcRelativeTexcoordTexture(vec2 texcoord)
 {
 
     texcoord = texcoord * (1.0/8.0);
-    float y = (1.0/8.0) * float(u_building_animation_index/8 * 2);
+    float y = (1.0/8.0) * float(7-u_building_animation_index/8 * 2);
     float x = (1.0/8.0) * float(u_building_animation_index - (u_building_animation_index/8)*8);
     texcoord = vec2(x,y) + texcoord;
     return texcoord;
@@ -108,7 +107,7 @@ vec2 calcRelativeTexcoordNormal(vec2 texcoord)
 {
 
     texcoord = texcoord * (1.0/8.0);
-    float y = (1.0/8.0) * float(u_building_animation_index/8 * 2 + 1);
+    float y = (1.0/8.0) * float(7-u_building_animation_index/8 * 2 - 1);
     float x = (1.0/8.0) * float(u_building_animation_index - (u_building_animation_index/8)*8);
     texcoord = vec2(x,y) + texcoord;
     return texcoord;
