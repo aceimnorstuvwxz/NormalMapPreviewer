@@ -48,6 +48,11 @@
 		521A8E6519F0C34300D177D7 /* Default-736h@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 521A8E6319F0C34300D177D7 /* Default-736h@3x.png */; };
 		52B47A471A53D09C004E4C60 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B47A461A53D09B004E4C60 /* Security.framework */; };
 		8262943E1AAF051F00CB7CF7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8262943D1AAF051F00CB7CF7 /* Security.framework */; };
+		B507F0051BD3AB750011271A /* WelcomeScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B507F0031BD3AB750011271A /* WelcomeScene.cpp */; settings = {ASSET_TAGS = (); }; };
+		B507F0061BD3ABA40011271A /* WelcomeScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B507F0031BD3AB750011271A /* WelcomeScene.cpp */; };
+		B507F0071BD3ABA40011271A /* WelcomeScene.h in Sources */ = {isa = PBXBuildFile; fileRef = B507F0041BD3AB750011271A /* WelcomeScene.h */; };
+		B507F0091BD3ABEA0011271A /* message.json in Resources */ = {isa = PBXBuildFile; fileRef = B507F0081BD3ABEA0011271A /* message.json */; settings = {ASSET_TAGS = (); }; };
+		B507F00A1BD3ABF80011271A /* message.json in Resources */ = {isa = PBXBuildFile; fileRef = B507F0081BD3ABEA0011271A /* message.json */; };
 		B51A33BF1BBD8BBE00024A34 /* 3d in Resources */ = {isa = PBXBuildFile; fileRef = B51A33B71BBD8BBE00024A34 /* 3d */; settings = {ASSET_TAGS = (); }; };
 		B51A33C21BBD8BBE00024A34 /* ios_ids.plist in Resources */ = {isa = PBXBuildFile; fileRef = B51A33BA1BBD8BBE00024A34 /* ios_ids.plist */; settings = {ASSET_TAGS = (); }; };
 		B51A33C31BBD8BBE00024A34 /* maps in Resources */ = {isa = PBXBuildFile; fileRef = B51A33BB1BBD8BBE00024A34 /* maps */; settings = {ASSET_TAGS = (); }; };
@@ -205,7 +210,7 @@
 		1AC6FAE5180E9839004C840B /* cocos2d_libs.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = cocos2d_libs.xcodeproj; path = ../cocos2d/build/cocos2d_libs.xcodeproj; sourceTree = "<group>"; };
 		1ACB3243164770DE00914215 /* libcurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcurl.a; path = ../../cocos2dx/platform/third_party/ios/libraries/libcurl.a; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		1D6058910D05DD3D006BFB54 /* DungeonInvade iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DungeonInvade iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D6058910D05DD3D006BFB54 /* DungeonInvade-previewer iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DungeonInvade-previewer iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		46880B8419C43A87006E1F66 /* AppDelegate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AppDelegate.cpp; sourceTree = "<group>"; };
@@ -222,7 +227,7 @@
 		503AE10417EB98FF00D1A890 /* Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Prefix.pch; path = mac/Prefix.pch; sourceTree = "<group>"; };
 		503AE11117EB99EE00D1A890 /* libcurl.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcurl.dylib; path = usr/lib/libcurl.dylib; sourceTree = SDKROOT; };
 		503AE11A17EB9C5A00D1A890 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
-		5087E76F17EB910900C73F5D /* DungeonInvade Mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DungeonInvade Mac.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5087E76F17EB910900C73F5D /* DungeonInvade-previewer iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DungeonInvade-previewer iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5087E77217EB970100C73F5D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		5087E77317EB970100C73F5D /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		5087E77417EB970100C73F5D /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
@@ -245,6 +250,9 @@
 		521A8E6319F0C34300D177D7 /* Default-736h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-736h@3x.png"; sourceTree = "<group>"; };
 		52B47A461A53D09B004E4C60 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
 		8262943D1AAF051F00CB7CF7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		B507F0031BD3AB750011271A /* WelcomeScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WelcomeScene.cpp; sourceTree = "<group>"; };
+		B507F0041BD3AB750011271A /* WelcomeScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WelcomeScene.h; sourceTree = "<group>"; };
+		B507F0081BD3ABEA0011271A /* message.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = message.json; sourceTree = "<group>"; };
 		B51A33B71BBD8BBE00024A34 /* 3d */ = {isa = PBXFileReference; lastKnownFileType = folder; path = 3d; sourceTree = "<group>"; };
 		B51A33BA1BBD8BBE00024A34 /* ios_ids.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ios_ids.plist; sourceTree = "<group>"; };
 		B51A33BB1BBD8BBE00024A34 /* maps */ = {isa = PBXFileReference; lastKnownFileType = folder; path = maps; sourceTree = "<group>"; };
@@ -379,8 +387,8 @@
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1D6058910D05DD3D006BFB54 /* DungeonInvade iOS.app */,
-				5087E76F17EB910900C73F5D /* DungeonInvade Mac.app */,
+				1D6058910D05DD3D006BFB54 /* DungeonInvade-previewer iOS.app */,
+				5087E76F17EB910900C73F5D /* DungeonInvade-previewer iOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -435,6 +443,7 @@
 		46880B7519C43A67006E1F66 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				B507F0081BD3ABEA0011271A /* message.json */,
 				B52159FB1BCFED8A0022EC33 /* images */,
 				B5F85DDA1BC8FCA800905498 /* mapdata */,
 				B5F3A1E81BC58791002FDE82 /* graphic */,
@@ -560,6 +569,8 @@
 		B549B2071BC8E98800201D3A /* otherscene */ = {
 			isa = PBXGroup;
 			children = (
+				B507F0031BD3AB750011271A /* WelcomeScene.cpp */,
+				B507F0041BD3AB750011271A /* WelcomeScene.h */,
 				B549B20B1BC8F36B00201D3A /* WelcoScene.cpp */,
 				B549B20C1BC8F36B00201D3A /* WelcoScene.h */,
 				B549B2081BC8E9E600201D3A /* ScatOrcScene.cpp */,
@@ -621,9 +632,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1D6058900D05DD3D006BFB54 /* DungeonInvade iOS */ = {
+		1D6058900D05DD3D006BFB54 /* DungeonInvade-previewer iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "DungeonInvade iOS" */;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "DungeonInvade-previewer iOS" */;
 			buildPhases = (
 				1D60588D0D05DD3D006BFB54 /* Resources */,
 				1D60588E0D05DD3D006BFB54 /* Sources */,
@@ -634,14 +645,14 @@
 			dependencies = (
 				1AC6FB25180E99E1004C840B /* PBXTargetDependency */,
 			);
-			name = "DungeonInvade iOS";
+			name = "DungeonInvade-previewer iOS";
 			productName = iphone;
-			productReference = 1D6058910D05DD3D006BFB54 /* DungeonInvade iOS.app */;
+			productReference = 1D6058910D05DD3D006BFB54 /* DungeonInvade-previewer iOS.app */;
 			productType = "com.apple.product-type.application";
 		};
-		5087E73D17EB910900C73F5D /* DungeonInvade Mac */ = {
+		5087E73D17EB910900C73F5D /* DungeonInvade-previewer Mac */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5087E76C17EB910900C73F5D /* Build configuration list for PBXNativeTarget "DungeonInvade Mac" */;
+			buildConfigurationList = 5087E76C17EB910900C73F5D /* Build configuration list for PBXNativeTarget "DungeonInvade-previewer Mac" */;
 			buildPhases = (
 				5087E74817EB910900C73F5D /* Resources */,
 				5087E75617EB910900C73F5D /* Sources */,
@@ -652,9 +663,9 @@
 			dependencies = (
 				1AC6FB16180E9959004C840B /* PBXTargetDependency */,
 			);
-			name = "DungeonInvade Mac";
+			name = "DungeonInvade-previewer Mac";
 			productName = iphone;
-			productReference = 5087E76F17EB910900C73F5D /* DungeonInvade Mac.app */;
+			productReference = 5087E76F17EB910900C73F5D /* DungeonInvade-previewer iOS.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -670,7 +681,7 @@
 					};
 				};
 			};
-			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "DungeonInvade" */;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "DungeonInvade-previewer" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
@@ -690,8 +701,8 @@
 			);
 			projectRoot = "";
 			targets = (
-				1D6058900D05DD3D006BFB54 /* DungeonInvade iOS */,
-				5087E73D17EB910900C73F5D /* DungeonInvade Mac */,
+				1D6058900D05DD3D006BFB54 /* DungeonInvade-previewer iOS */,
+				5087E73D17EB910900C73F5D /* DungeonInvade-previewer Mac */,
 			);
 		};
 /* End PBXProject section */
@@ -743,6 +754,7 @@
 				B5F85DDB1BC8FCA800905498 /* mapdata in Resources */,
 				50EF629617ECD46A001EB2F8 /* Icon-40.png in Resources */,
 				5087E78217EB970100C73F5D /* Icon-144.png in Resources */,
+				B507F0091BD3ABEA0011271A /* message.json in Resources */,
 				50EF629817ECD46A001EB2F8 /* Icon-80.png in Resources */,
 				5087E78417EB970100C73F5D /* Icon-57.png in Resources */,
 				5087E77E17EB970100C73F5D /* Default.png in Resources */,
@@ -755,6 +767,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B507F00A1BD3ABF80011271A /* message.json in Resources */,
 				B52159FD1BCFEDDD0022EC33 /* images in Resources */,
 				B52159FE1BCFEDDD0022EC33 /* mapdata in Resources */,
 				B52159FF1BCFEDDD0022EC33 /* graphic in Resources */,
@@ -788,6 +801,7 @@
 				B51A33DE1BBD8CEA00024A34 /* TRLocale.cpp in Sources */,
 				B539EAA91BBE711400311CDC /* DDAgent.cpp in Sources */,
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
+				B507F0051BD3AB750011271A /* WelcomeScene.cpp in Sources */,
 				B59172071BCD7C010070CD81 /* DDUpgradeLoad.cpp in Sources */,
 				B5F85DE61BCA72E600905498 /* Bigmap-message.cpp in Sources */,
 				B5F3A1D31BC282B1002FDE82 /* BattleField.cpp in Sources */,
@@ -823,6 +837,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B507F0061BD3ABA40011271A /* WelcomeScene.cpp in Sources */,
+				B507F0071BD3ABA40011271A /* WelcomeScene.h in Sources */,
 				B52159C41BCFED200022EC33 /* EditState.cpp in Sources */,
 				B52159C51BCFED200022EC33 /* EditState.h in Sources */,
 				B52159C61BCFED200022EC33 /* format.cpp in Sources */,
@@ -931,7 +947,7 @@
 					"$(_COCOS_LIB_IOS_END)",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.turnro.dungeoninvade;
-				PRODUCT_NAME = "${TARGET_NAME}";
+				PRODUCT_NAME = "DungeonInvade-previewer iOS";
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -970,7 +986,7 @@
 					"$(_COCOS_LIB_IOS_END)",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.turnro.dungeoninvade;
-				PRODUCT_NAME = "${TARGET_NAME}";
+				PRODUCT_NAME = "DungeonInvade-previewer iOS";
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1009,6 +1025,7 @@
 					"$(_COCOS_LIB_MAC_END)",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.turnro.normalmappreviewer;
+				PRODUCT_NAME = "DungeonInvade-previewer iOS";
 				USER_HEADER_SEARCH_PATHS = "$(_COCOS_HEADER_MAC_BEGIN) $(_COCOS_HEADER_MAC_END)";
 			};
 			name = Debug;
@@ -1041,6 +1058,7 @@
 					"$(_COCOS_LIB_MAC_END)",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.turnro.normalmappreviewer;
+				PRODUCT_NAME = "DungeonInvade-previewer iOS";
 				USER_HEADER_SEARCH_PATHS = "$(_COCOS_HEADER_MAC_BEGIN) $(_COCOS_HEADER_MAC_END)";
 			};
 			name = Release;
@@ -1109,7 +1127,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "DungeonInvade iOS" */ = {
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "DungeonInvade-previewer iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1D6058940D05DD3E006BFB54 /* Debug */,
@@ -1118,7 +1136,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		5087E76C17EB910900C73F5D /* Build configuration list for PBXNativeTarget "DungeonInvade Mac" */ = {
+		5087E76C17EB910900C73F5D /* Build configuration list for PBXNativeTarget "DungeonInvade-previewer Mac" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5087E76D17EB910900C73F5D /* Debug */,
@@ -1127,7 +1145,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "DungeonInvade" */ = {
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "DungeonInvade-previewer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C01FCF4F08A954540054247B /* Debug */,

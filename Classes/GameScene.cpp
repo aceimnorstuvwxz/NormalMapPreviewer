@@ -5,7 +5,7 @@
 #include "ScatOrcScene.h"
 #include "DDMapData.h"
 #include "format.h"
-
+#include "EditState.h"
 
 USING_NS_CC;
 
@@ -38,19 +38,9 @@ bool GameScene::init()
 
     DDMapData::s()->isBattleFieldObserving = true;
 
-    /*
-    addCommonBtn({0.5,0.1}, "battle dlg", [this](){
-        this->battleDialog("this is message", "action", [](){
-            CCLOG("test dlg func");
-        });
-    });
-     */
-    addCommonBtn({0.5,0.1}, "reset", [this](){
-        Director::getInstance()->replaceScene(GameScene::create());
-    });
 
-    addCommonBtn({0.25,0.1}, "refresh", [this](){
-        _battleField.configAnimationTexture("/Users/chenbingfeng/Documents/NormalMapPreviewer/0/animation.png");
+    addCommonBtn({0.25,0.1}, "back", [this](){
+        Director::getInstance()->popScene();
     });
 
     addCommonBtn({0.75,0.1}, "shadow", [this](){
@@ -76,6 +66,9 @@ bool GameScene::init()
     _defaultLayer->setZOrder(1000);
 
     scheduleUpdate();
+    _battleField.configAnimationTexture(fmt::sprintf("/Users/chenbingfeng/Documents/NormalMapEditor/%s.json.png", EditState::s()->_moduleName));
+
+
 
 
     return true;

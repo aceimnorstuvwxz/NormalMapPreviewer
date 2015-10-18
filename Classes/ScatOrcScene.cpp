@@ -2,8 +2,7 @@
 
 #include "ScatOrcScene.h"
 #include "GameScene.h"
-#include "WelcoScene.h"
-
+#include "WelcomeScene.h"
 USING_NS_CC;
 bool ScatOrcScene::init()
 {
@@ -26,7 +25,7 @@ bool ScatOrcScene::init()
     sp->runAction(Sequence::create(FadeIn::create(0.1), DelayTime::create(0.1), FadeOut::create(0.1), nullptr));
 
     scheduleOnce([this](float dt){
-        Director::getInstance()->replaceScene(GameScene::create());
+        Director::getInstance()->replaceScene(WelcomeScene::create());
     }, 0.4, "gamescene open");
 
 
